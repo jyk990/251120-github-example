@@ -1,0 +1,136 @@
+:root{
+  --bg: #fffaf6;
+  --card: #ffffff;
+  --muted: #7b7b7b;
+  --accent-1: #ffd8d0;
+  --accent-2: #f7f0ff;
+  --accent-3: #dff7f1;
+  --text: #213547;
+  --glass: rgba(255,255,255,0.7);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  background: linear-gradient(180deg,var(--bg),#fffefc 60%);
+  color:var(--text);
+}
+
+#app{
+  max-width:1000px;
+  margin:40px auto;
+  padding:24px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:20px;
+  box-shadow:0 8px 30px rgba(33,53,71,0.08);
+  padding:28px;
+}
+
+.hero{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background: conic-gradient(from 180deg at 50% 50%, var(--accent-1), var(--accent-2), var(--accent-3));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  color:var(--text);
+  box-shadow:0 6px 18px rgba(33,53,71,0.08);
+}
+
+.name{
+  font-size:28px;
+  font-weight:700;
+  margin:0;
+}
+.role{
+  margin-top:6px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.intro{
+  margin-top:12px;
+  color:#475569;
+}
+
+.meta{
+  display:flex;
+  gap:12px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  background:var(--accent-2);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:600;
+  color:var(--text);
+}
+
+.section{
+  margin-top:22px;
+}
+
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.item{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--accent-1);
+  margin-top:6px;
+  flex-shrink:0;
+}
+
+.item .content{
+  background:var(--glass);
+  padding:12px 14px;
+  border-radius:12px;
+}
+
+.muted{color:var(--muted);font-size:14px}
+
+.actions{display:flex;gap:12px;margin-top:16px}
+
+.btn{
+  background:transparent;
+  border:1px solid rgba(33,53,71,0.08);
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+@media (max-width:640px){
+  .hero{justify-content:center;text-align:center}
+  .avatar{width:96px;height:96px}
+}
+
